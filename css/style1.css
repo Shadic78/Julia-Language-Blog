@@ -1,0 +1,92 @@
+body{
+  background: rgb(217, 215, 208);
+}
+.nav-opcion{
+  color: rgb(232, 233, 232);
+  -webkit-transition: color ease .3s;
+  -o-transition: color ease .3s;
+  transition: color ease .3s;
+}
+.nav-opcion:hover{
+  color: rgb(171, 181, 171);
+}
+.tituloArticulos{
+  background: rgb(203, 42, 71);
+  color: white;
+}
+.no-padding{
+  padding: 0px 0px;
+}
+.articulo{
+  box-sizing: border-box;  
+  background: white;
+  font-family: Calibri, arial, sans-serif;
+  color: rgb(60, 63, 64);
+  padding: 1.5em 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.articulo p{
+  font-size: 18px;
+  text-align: justify;
+}
+.boton{
+  background: rgb(203, 42, 71);
+  border: none;
+}
+.boton:hover{
+  border: none;
+  background: rgb(167, 34, 58);
+}
+.botonCompleto{
+  background: rgb(203, 42, 71);
+  border: none;
+  width: 100%;
+}
+.botonCompleto:hover{
+  border: none;
+  background: rgb(167, 34, 58);
+}
+.articulo img{
+  width:100%;
+}
+aside{
+  padding: 0;
+}
+aside .cont-aside{
+  background: white;
+  font-family: Calibri, arial, sans-serif;
+  color: rgb(60, 63, 64);
+  padding: 1.5em 1.5em;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.borde-izq{
+  border-left: solid 10px rgb(217, 215, 208);
+}
+footer{
+  color: white;
+  font-family: Roboto, Calibri, arial;
+  font-size: 20px;
+}
+.contenedorJuego{
+  margin: 0 auto;
+  margin-top: 2em;
+}
+.titulo-controles{
+  font-size: 20px;
+}
+.tituloContenedor{
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background: rgb(203, 42, 71);
+  font-size: 16px;
+  text-align: center;
+  color: white;
+}
+.filtros{
+  height: 380px;
+}

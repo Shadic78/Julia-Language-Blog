@@ -1,0 +1,186 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: rgb(217, 215, 208);
+}
+.contenedorGeneral{
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/*
+  Logo
+*/
+.contenedorGeneral .contenedorLogo{
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.contenedorGeneral .contenedorLogo img{
+  width: 100%;
+}
+/*
+  Header
+*/
+.contenedorGeneral .contenedorLogo header{
+  width: fit-content;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  box-sizing: border-box;
+  font-family: roboto, arial;
+  font-size: 30px;
+  text-align: center;
+  /*background: rgb(60, 62, 62);*/
+  padding: 10px 15px;
+}
+.contenedorGeneral .contenedorLogo header a{
+  text-decoration: none;
+}
+/*
+  Barra de navegacion
+*/
+.contenedorGeneral .contenedorLogo nav{
+  width: fit-content;
+  position: absolute;
+  top: 2em;
+  right: 1em;
+  /*background: rgb(203, 42, 71);*/
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.contenedorGeneral .contenedorLogo nav ul{
+  margin: 0px;
+  padding: 0px;
+}
+.contenedorGeneral .contenedorLogo nav ul li{
+  display: inline-block;
+}
+.contenedorGeneral .contenedorLogo nav ul li a{
+  display: block;
+  color: white;
+  border-radius: 1em;
+  font-family: roboto, arial;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 12px;
+  margin: 0px;
+  -webkit-transition: background ease .5s;
+  -o-transition: background ease .5s;
+  transition: background ease .5s;
+}
+.contenedorGeneral .contenedorLogo nav ul li a:hover{
+  background: rgb(138, 14, 14);
+  cursor: pointer;
+}
+/*
+  Contenido
+*/
+.contenedorGeneral .contenedorContenido{
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+.contenedorGeneral .contenedorContenido .tituloContenido{
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 2.1em;
+  font-family: Calibri, roboto, arial;
+  font-weight: bold;
+  padding: 15px 0px;;
+  background: rgb(203, 42, 71);
+  color: white;
+  border: solid 1px rgb(154, 150, 150);
+  margin-bottom: 15px;
+}
+/*
+  Columna izquierda
+*/
+.contenedorGeneral .contenedorContenido .columnaIzquierda{
+  float: left;
+  width: 72%;
+  /*background: white;*/
+  box-sizing: border-box;
+  height: auto;
+}
+.contenedorGeneral .contenedorContenido .columnaUnica{
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background: white;
+  border: solid 1px rgb(154, 150, 150);
+  padding: 15px 25px;
+  text-align: center;
+  color: rgb(55, 55, 53);
+  font-family: Calibri, arial, sans-serif;
+}
+.contenedorGeneral .contenedorContenido .columnaUnica p{
+  text-align: justify;
+  font-family: Calibri, arial, sans-serif;
+  color: rgb(55, 55, 53);
+  font-size: 20px;
+}
+/* Articulos */
+.contenedorGeneral article{
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  box-sizing: border-box;
+  padding: 15px 2em;
+  font-size: 18px;
+  font-family: Calibri, roboto, arial;
+  color: rgb(55, 55, 53);
+  text-align: justify;
+  margin-bottom: 15px;
+  border: solid 1px rgb(154, 150, 150);
+}
+.contenedorGeneral article h1{
+  text-align: center;
+}
+/* Boton de leer mas */
+.contenedorGeneral article .btn-leerMas{
+  display: block;
+  padding: 8px 10px;
+  background: rgb(203, 42, 71);
+  color: white;
+  font-size: 16px;
+  font-family: arial, sans-serif;
+  border-radius: 1em;
+  text-decoration: none;
+  float: right;
+  -webkit-transition: background ease .3s;
+  -o-transition: background ease .3s;
+  transition: background ease .3s;
+}
+.contenedorGeneral article .btn-leerMas:hover{
+  background: rgb(140, 28, 48);
+}
+/*
+  Columna derecha
+*/
+.contenedorGeneral .contenedorContenido .columnaDerecha{
+  float: right;
+  width: 25%;
+  background: white;
+  box-sizing: border-box;
+  border: solid 1px rgb(154, 150, 150);
+  height: 500px;
+}
+/*
+  Footer
+*/
+.contenedorGeneral footer{
+  width: 100%;
+  height: auto;
+  background: rgb(60, 62, 62);
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-family: arial, sans-serif;
+  box-sizing: inherit;
+  padding: 10px 15px;
+}
