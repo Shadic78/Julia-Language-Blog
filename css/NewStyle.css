@@ -1,0 +1,89 @@
+* {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+/*
+    ESTILOS DEL HEADER
+************************************************************************/
+.Header-Escritorio {
+  display: none;
+}
+
+header {
+  background: rgb(4, 43, 53);
+}
+
+header img {
+  width: 100%;
+}
+
+/*
+    ESTILOS DE LOS ARTICULOS DEL INDEX
+************************************************************************/
+.Cont-Articulos {
+  background: rgb(215, 222, 223);
+  padding-top: 1em;
+}
+
+article {
+  background: none;
+  margin: 0 auto;
+  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  transition: all ease .5s;
+}
+
+article:hover {
+  transform: scale(1.05);
+}
+
+.Article-Img-Container {
+  width: 100%;
+}
+
+.Article-Img-Container img {
+  width: 100%;
+}
+
+.Article-Title-Container {
+  width: 100%;
+  background: white;
+  padding: .6em 1em;
+  color: rgb(101, 98, 98);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/*
+    RESPONSIVE PARA MD DE BOOTSTRAP (768PX)
+************************************************************************/
+@media screen and (min-width: 768px) {
+  .Header-Escritorio {
+    display: block;
+  }
+
+  .Header-Moviles {
+    display: none;
+  }
+
+  /* Agregar scroll al contenedor de articulos */
+  .Cont-Articulos {
+    max-height: 100vh;
+    overflow: scroll;
+  }
+}
