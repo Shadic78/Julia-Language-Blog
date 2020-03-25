@@ -32,11 +32,23 @@ header img {
 }
 
 /*
+    ESTILOS DE LA BARRA DE NAVEGACION
+************************************************************************/
+.Navegacion {
+  background: white;
+  color: black;
+}
+
+.nav-opcion {
+  color: black;
+}
+
+/*
     ESTILOS DE LOS ARTICULOS DEL INDEX
 ************************************************************************/
 .Cont-Articulos {
   background: rgb(215, 222, 223);
-  padding-top: 1em;
+  padding-top: 0;
 }
 
 article {
@@ -63,7 +75,7 @@ article:hover {
 .Article-Title-Container {
   width: 100%;
   background: white;
-  padding: .6em 1em;
+  padding: 1.2em 1em;
   color: rgb(101, 98, 98);
   font-size: 1em;
   font-weight: bold;
