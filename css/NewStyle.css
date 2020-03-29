@@ -25,6 +25,10 @@ body {
 
 header {
   background: rgb(4, 43, 53);
+  background-image: radial-gradient(ellipse closest-side at 50% 50%, #3a3f45, #37383c 25%, #343233);
+  background-repeat: no-repeat;
+  background-size: 100% 1000px;
+  background-position: center -120px;
 }
 
 header img {
@@ -54,14 +58,12 @@ header img {
 article {
   background: none;
   margin: 0 auto;
-  padding: 1em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-top: 1em;
   transition: all ease .5s;
 }
 
 article:hover {
-  transform: scale(1.05);
+  text-decoration: underline;
 }
 
 .Article-Img-Container {
@@ -76,9 +78,10 @@ article:hover {
   width: 100%;
   background: white;
   padding: 1.2em 1em;
-  color: rgb(101, 98, 98);
+  color: rgb(102, 89, 92);
   font-size: 1em;
   font-weight: bold;
+  transition: all ease .5s;
 }
 
 /*
