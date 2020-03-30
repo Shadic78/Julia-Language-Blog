@@ -85,6 +85,32 @@ article:hover {
 }
 
 /*
+    ESTILOS DE LOS ARTICULOS COMPLETOS
+************************************************************************/
+.Full-Article-Container {
+  background: white;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  box-sizing: border-box;
+  padding: 1.8em;
+  color: rgb(84, 84, 84);
+}
+
+.Full-Article-Container h1 {
+  font-size: 1.8em;
+}
+
+.Full-Article-Container p {
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+.Full-Article-Container img {
+  max-width: 85%;
+  margin-bottom: 1em;
+}
+
+/*
     RESPONSIVE PARA MD DE BOOTSTRAP (768PX)
 ************************************************************************/
 @media screen and (min-width: 768px) {
