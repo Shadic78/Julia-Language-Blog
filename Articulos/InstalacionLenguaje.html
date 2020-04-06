@@ -14,11 +14,6 @@
 
   <div class="container-fluid h-100">
     <div class="row h-100">
-      <!-- Header para la version movil -->
-      <header class="col-12 col-md-4 Header-Moviles">
-          <a class="navbar-brand" href="#"><span style="color:white;"><img src ="../img/JuliaLogo.png"/></span><span style="color:red;">Team</span></a>
-      </header>
-      <!-- Fin Header movil -->
 
       <!-- Header para la version de escritorio (MD) -->
       <header class="col-12 col-md-4 Header-Escritorio">
@@ -37,7 +32,11 @@
         <!-- Barra de navegacion -->
         <div class="row">
           <nav class="col-12 navbar navbar-expand-md navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <figure class="invisibleLogo logo">
+              <img src="img/JuliaLogoHD.png" width="70px">
+            </figure>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -46,7 +45,8 @@
                   <a class="nav-link" href="#"><span class="nav-opcion"><span class="icon-home"></span>Inicio</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="articulos/info.html"><span class="nav-opcion"><span class="icon-help-with-circle"></span>¿Quienes somos?</span></a>
+                  <a class="nav-link" href="articulos/info.html"><span class="nav-opcion"><span
+                        class="icon-help-with-circle"></span>¿Quienes somos?</span></a>
                 </li>
               </ul>
             </div>
@@ -57,14 +57,165 @@
         <!-- Contenedor articulo -->
         <div class="row justify-content-center">
           <div class="col-12 col-md-11 Full-Article-Container">
-            <h1>Instalación del lenguaje Julia</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p><strong>1.- Entrar a <a href="https://atom.io/">atom.io</a> y dar clic en "Download".
-            </strong></p>
-            <img src="../img/AnalizadorDiagrama.png" alt="">
-            <p><strong>1.- Entrar a <a href="https://atom.io/">atom.io</a> y dar clic en "Download".
-            </strong></p>
-            <img src="../img/AnalizadorDiagrama.png" alt="">            
+
+            <h1>
+              Instalacion del lenguaje Julia
+            </h1>
+            <p>
+              Instalar el lenguaje de programación Julia en tu computadora es muy facil,
+              solo tienes que seguir los siguientes pasos:
+            </p>
+
+            <p><br />
+              <strong>
+                1.- Entrar a <a href="https://julialang.org/downloads/">https://julialang.org/downloads/</a>
+                y descargar la versión correspondiente a tu sistema operativo.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/1.png" alt="1">
+
+            <p><br />
+              <strong>
+                2.- Abrir el instalador y copiar y guardar en un bloc de notas la
+                dirección que aparece en la caja de texto, posteriormente dar clic en install.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/2.png" alt="2">
+
+            <p><br />
+              <strong>
+                3.- Entrar a <a href="https://atom.io/">https://atom.io/</a> y dar clic en download.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/3.png" alt="3">
+
+            <p><br />
+              <strong>
+                4.- Instalar atom.
+              </strong>
+            </p>
+
+            <p><br />
+              <strong>
+                5.- Abrir atom e ir a Settings.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/4.png" alt="4">
+
+            <p><br />
+              <strong>
+                6.- Ir a Install.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/5.png" alt="5">
+
+            <p><br />
+              <strong>
+                7.- Escribir “uber-juno” y presionar enter.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/6.png" alt="6">
+
+            <p><br />
+              <strong>
+                8.- Dar clic en install del primer resultado.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/7.png" alt="7">
+
+            <p><br />
+              Habiendo seguido estos pasos ya tendremos instalado Julia y el IDE de Julia
+              en nuestra computadora, pero posiblemente haya un problema al intentar utilizar
+              el lenguaje Julia, debido a que el PATH no se configuro automaticamente.
+            </p>
+
+            <h4><br />
+              Configuración del PATH
+            </h4>
+
+            <p>
+              <strong>
+                1.- Dar clic derecho sobre "Este equipo" y dar clic en "Propiedades".
+              </strong>
+            </p>
+            <img src="../img/Instalacion/8.png" alt="8">
+
+            <p><br />
+              <strong>
+                2.- Dar clic en "Configuración avanzada del sistema".
+              </strong>
+            </p>
+            <img src="../img/Instalacion/9.png" alt="9">
+
+            <p><br />
+              <strong>
+                3.- En la pestaña "Opciones avanzadas" dar clic en el botón "Variables de entorno".
+              </strong>
+            </p>
+            <img src="../img/Instalacion/10.png" alt="10">
+
+            <p><br />
+              <strong>
+                4.- Dar clic en "Path" y en "Editar".
+              </strong>
+            </p>
+            <img src="../img/Instalacion/11.png" alt="11">
+
+            <p><br />
+              <strong>
+                5.- Dar clic en "Nuevo".
+              </strong>
+            </p>
+            <img src="../img/Instalacion/12.png" alt="12">
+
+            <p><br />
+              <strong>
+                6.- Pegar el texto que copiamos del instalador de julia y agregarle al final “\bin”.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/13.png" alt="13">
+
+            <p><br />
+              <strong>
+                7.- Dar clic en "Aceptar" hasta cerrar todas las ventanas abiertas.
+              </strong>
+            </p>
+
+            <p>
+              <strong>
+                8.-  A continuación ir a "Packages" y buscar el package "julia-client", dar clic en "Settings".
+              </strong>
+            </p>
+            <img src="../img/Instalacion/14.png" alt="14">
+
+            <p><br />
+              <strong>
+                9.- En "Julia Path" escribir la dirección que pegamos en el Path y agregarle al final “\julia.exe”.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/15.png" alt="15">
+
+            <p><br />
+              <strong>
+                10.- Ahora todo debería estar correctamente configurado, para verificarlo daremos clic en Juno > Open REPL.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/16.png" alt="16">
+
+            <p><br />
+              <strong>
+                11.-  Presionar ENTER en la consola que aparece y espera a que la descarga termine.
+              </strong>
+            </p>
+
+            <p>
+              <strong>
+                12.- Cuando aparezca el logo de Julia el proceso habrá terminado y
+                podrás comenzar a crear proyectos con el lenguaje Julia.
+              </strong>
+            </p>
+            <img src="../img/Instalacion/17.png" alt="17">
+
           </div>
         </div>
         <!-- Fin contenedor articulo -->
