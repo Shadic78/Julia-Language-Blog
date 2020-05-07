@@ -65,6 +65,7 @@
               Subprogramas
             </h1>
 
+            <!--Parte del sintaxis-->
             <p style="text-align: center;">
               <strong>Sintaxis de la declaracion de una funcion: </strong>
             </p>
@@ -79,7 +80,7 @@
               que la otra esta en un texto plano.
 
             </p>
-
+            <!--Fin parte del sintaxis-->
             <!--Parte para los parametros-->
             <p style="text-align: center;">
               <strong>Argumentos / Parámetros </strong>
@@ -98,16 +99,31 @@
               referencia a una matriz
               de enteros</p>
 
+            <p></p>
+
             <p>Si aun no entiende bien los tipos de datos, recomiendo hechar un vistazo a esa parte primero <a
                 href=".../articulos/Variables">Variables</a></p>
 
             <!--Fin parte de los parametros-->
 
-            <!--Parte del return-->
+            <p>¿Paso por referencia ó por valor?</p>
             <p style="text-align: center;">
-              <strong>La palabre reservada <u>return</u></strong>
+              <strong>NO, ¿Pass by Sharing / "pasar por compartir"?</strong>
             </p>
-            <!--Fin parte return-->
+            <p>Los argumentos de la función de Julia siguen una convención a veces llamada "pasar por compartir", lo que
+              significa que los valores no se copian cuando se pasan a las funciones. Los argumentos de función en sí
+              mismos actúan como nuevos enlaces de variables (nuevas ubicaciones que pueden referirse a valores), pero
+              los valores a los que se refieren son idénticos a los valores pasados. Las modificaciones a los valores
+              mutables (como las matrices) realizadas dentro de una función serán visibles para la persona que llama.
+              Este es el mismo comportamiento que se encuentra en Scheme, la mayoría de Lisps, Python, Ruby y Perl,
+              entre otros lenguajes dinámicos.</p>
+
+            <!--Necesito checar esto :v-->
+            <p>En resumen, pasar por compartir funciona como pasar por referencia, pero no se puede cambiar a qué valor
+              se
+              refiere un enlace(espacio en memoria) en el alcance de la llamada reasignando a un argumento en la función
+              que se llama; si
+              reasigna un argumento, el enlace en el La persona que llama no ha cambiado.</p>
 
           </div>
         </div>
