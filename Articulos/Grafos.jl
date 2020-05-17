@@ -14,28 +14,28 @@ mutable struct Grafo
     vertices::Array{Vertice,1}
 end
 # Crea un grafo iniciando la matriz de adyacencia en zeros, y los vertices como nulos el numero de vertice comienza en zero
-createGrafo(dim::Int64) = Grafo(0, zeros(Int64, dim, dim), Array{Vertice,1}(undef, dim)) 
+crearGrafo(dim::Int64) = Grafo(0, zeros(Int64, dim, dim), Array{Vertice,1}(undef, dim)) 
 
 # Funcion encargada de crear vertices e insertarlos en el grafo
 function insertarVertice(nombre::String)
-    grafo2.numeroVertices += 1
-    numV = grafo2.numeroVertices
-    if numV > size(grafo2.vertices, 1)
+    grafo.numeroVertices += 1
+    numV = grafo.numeroVertices
+    if numV > size(grafo.vertices, 1)
         
-        println("Erros")
+        println("Error")
         return nothing
     end
   
     vertice = Vertice(nombre, numV)
-    grafo2.vertices[numV] = vertice
+    grafo.vertices[numV] = vertice
     
 end
 
 # funcion que obtienen el numero de vertice con un nombre en especifico
 function getNumeroVertice(nombre::String)
-    a = grafo2.numeroVertices
+    a = grafo.numeroVertices
     for i = 1:a 
-        if nombre == grafo2.vertices[i].nombre
+        if nombre == grafo.vertices[i].nombre
             return i
         end
     end
@@ -51,16 +51,16 @@ function enlazarVertices(nombre1::String, nombre2::String, peso::Int64)
         return nothing
     end
     
-    grafo2.matrizAD[n1, n2] = peso
+    grafo.matrizAD[n1, n2] = peso
     # No dirigido
-    grafo2.matrizAD[n2, n1] = peso
+    grafo.matrizAD[n2, n1] = peso
 end
 
 # funcion que imprime la matriz de adyacencia
 function printMatrizAD()
     for i = 1:dimension
         for j = 1:dimension
-            print(grafo2.matrizAD[i, j], " ")
+            print(grafo.matrizAD[i, j], " ")
         end
         println()
     end
@@ -73,7 +73,7 @@ function esAdyacente(va::Int64, vb::Int64)
     end
 
 
-    return grafo2.matrizAD[va, vb] >= 1
+    return grafo.matrizAD[va, vb] >= 1
 
 end
 
@@ -83,7 +83,7 @@ function getPeso(va::Int64, vb::Int64)
         return nothing
     end
 
-    return grafo2.matrizAD[va, vb]
+    return grafo.matrizAD[va, vb]
 end
 
 function getNumMinimunDistanceVertex(procesados::Array{Bool,1}, distancia::Array{Int64,1})
@@ -104,6 +104,26 @@ function getNumMinimunDistanceVertex(procesados::Array{Bool,1}, distancia::Array
     return min_Index
 end
 
+function encontrarRutaMasCorta(inicial, final, listaPadres::Array{Int64,1})
+    a = []
+    
+    destino = final
+    push!(a, destino)
+    
+    while (destino != inicial )
+        push!(a, listaPadres[destino])
+        
+        destino = listaPadres[destino]
+       
+    end
+
+    a = reverse!(a)
+    for i = 1:length(a)
+        print(a[i], " -> ")
+    end
+
+end
+
 
 function DijkstraAlgorithm(verticeInicial::String, verticeFinal::String, grafo::Grafo)
     totalVertices = grafo.numeroVertices
@@ -111,10 +131,20 @@ function DijkstraAlgorithm(verticeInicial::String, verticeFinal::String, grafo::
     vi = getNumeroVertice(verticeInicial)
     vf = getNumeroVertice(verticeFinal)
 
+    # Lista de cada vertice
+    # listOfLists = fill([], totalVertices)
+    listaPadres = fill(0, totalVertices)
+    listaPadres[1] = vi
+    
+
     # Inicializamos los arrays de distancia y procesados
     procesados = fill(false, totalVertices)
     distancia = fill(typemax(Int64), totalVertices)
+    rutas = []
+    
+     
 
+    # La distancia del vertice inicial es 0
     distancia[vi] = 0
 
     # recorremos todos los vertices
@@ -123,14 +153,19 @@ function DijkstraAlgorithm(verticeInicial::String, verticeFinal::String, grafo::
         u = getNumMinimunDistanceVertex(procesados, distancia)
        
         procesados[u] = true
+       
 
         # Actualizamos las distancias de los vertices adyacentes a u
-        for i = 1:totalVertices
+        for j = 1:totalVertices
             
-            if esAdyacente(u, i) && !procesados[i] && (distancia[u] != typemax(Int64))  && (distancia[u] + getPeso(u, i) < distancia[i])
+            if esAdyacente(u, j) && !procesados[j] && (distancia[u] != typemax(Int64))  && (distancia[u] + getPeso(u, j) < distancia[j])
+                
+                distancia[j] = distancia[u] + getPeso(u, j)
+                
+               # listOfLists[j] = vcat(listOfLists[j], u)
+                listaPadres[j] = u
                
-                distancia[i] = distancia[u] + getPeso(u, i)
-               
+                    
             end
     
         end
@@ -140,18 +175,22 @@ function DijkstraAlgorithm(verticeInicial::String, verticeFinal::String, grafo::
 
     # Aun no aplico entre dos vertices!!!!
     if distancia[vf] != typemax(Int64)
-        println("La distancia más corta de $(grafo2.vertices[vi].nombre) a $(grafo2.vertices[vf].nombre) es: $(distancia[vf])")
+        println("La distancia más corta de $(grafo.vertices[vi].nombre) a $(grafo.vertices[vf].nombre) es: $(distancia[vf])")
+        println("La ruta es: ")
+        encontrarRutaMasCorta(vi, vf, listaPadres)
+        println()
 
     else
         println("No existe ruta")
     end
     printSolution(distancia)
+    
 end
 
 function printSolution(distancia::Array{Int64,1})
     println("Vertice\t\tDistancia")
     for i = 1:length(distancia)
-        nombre = grafo2.vertices[i].nombre
+        nombre = grafo.vertices[i].nombre
         println(" $nombre \t\t $(distancia[i]) ")
     end
     
@@ -160,7 +199,7 @@ end
 
 
 dimension = 8
-grafo2 = createGrafo(dimension) # Variable global que representa el grafo
+grafo = crearGrafo(dimension) # Variable global que representa el grafo
 
 
 
@@ -176,21 +215,26 @@ insertarVertice("8")
 
 enlazarVertices("1", "2", 4)
 enlazarVertices("1", "3", 3)
+
 enlazarVertices("2", "5", 8)
+
 enlazarVertices("3", "4", 12)
 enlazarVertices("3", "6", 4)
+
 enlazarVertices("4", "6", 2)
 enlazarVertices("4", "8", 15)
+
 enlazarVertices("5", "7", 17)
 
 enlazarVertices("7", "4", 20)
 enlazarVertices("7", "8", 9)
+
 enlazarVertices("8", "6", 22)
 
 
 
 printMatrizAD()
-DijkstraAlgorithm("1", "8", grafo2)
+DijkstraAlgorithm("1", "8", grafo)
 
 
 # Falta testear esto 
