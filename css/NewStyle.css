@@ -116,6 +116,16 @@ article:hover {
   max-width: 85%;
   margin-bottom: 1em;
 }
+table{
+  border-collapse: collapse;
+}
+
+th, td{
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  
+}
 
 /*
     RESPONSIVE PARA MD DE BOOTSTRAP (768PX)

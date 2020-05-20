@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../iconos/style.css" />
+  <link rel="stylesheet" href="../css/NewStyle.css" />
+  <title>Julia Programming Language</title>
+
+</head>
+
+<body>
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <!-- Header para la version de escritorio (MD) -->
+      <header class="col-12 col-md-4 Header-Escritorio">
+        <div class="row h-100 align-items-center">
+          <div class="Header-Img-Container">
+            <img src="../img/JuliaLogoHD.png" alt="JuliaLogo" style="width:85%;">
+            <!--<img src="img/JuliaPanelCut.png" alt="Commands">-->
+          </div>
+        </div>
+      </header>
+      <!-- Fin Header escritorio -->
+
+      <!-- Contenedor Derecho -->
+      <div class="col-12 col-md-8 Cont-Articulos">
+
+        <!-- Barra de navegacion -->
+        <div class="row">
+          <nav class="col-12 navbar navbar-expand-md navbar-light bg-light">
+            <figure class="invisibleLogo logo">
+              <img src="../img/JuliaLogoHD.png" width="70px">
+            </figure>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html"><span class="nav-opcion"><span
+                        class="icon-home"></span>Inicio</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="articulos/info.html"><span class="nav-opcion"><span
+                        class="icon-help-with-circle"></span>¿Quienes somos?</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Contenedor articulo -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-11 Full-Article-Container">
+
+            <h1>
+              Variables y tipo de datos
+            </h1>
+            <h4>Variables</h4>
+            <p>Una variable es un nombre el cual tiene asociado un valor</p>
+            <img src="../img/Variables/variables1.jpg" alt="">
+            <p>Julia provee un sistema extremadamente flexible para nombrar variables. Los nombres de las variables son
+              sensibles a minúsculas y mayúsculas, y no tienen significado semántico (es decir, el lenguaje no tratará
+              las variables de manera diferente en función de sus nombres).</p>
+            <img src="../img/Variables/variables2.jpg" alt="">
+            <p>La sintaxis es tan simple como hacer: </p>
+            <img src="../img/Variables/variables3.jpg" alt="">
+            <h4>Reglas para la creación de variables</h4>
+            <p>Los identificadores(variables) deberán empezar por una letra (A-Z o a-z), luego pueden seguir caracteres
+              o números (0-9), algunos signos diacríticos u otros modificadores (- , _ ). Estos nombres no pueden ser
+              palabras reservadas o signos que representen funciones (+, -, *, . , ,…)
+              Existen casos especiales como:
+            </p>
+            <img src="../img/Variables/variables4.jpg" alt="">
+            <h4>Tipos de datos</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <th style="text-align: left">Tipo</th>
+
+                  <th style="text-align: left">Asignación relacion</th>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Int</code></a></td>
+                  <td style="text-align: left">x = 2, y = 5666</td>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Float</code></a></td>
+                  <td style="text-align: left">x = 2.0 <br> y = 123.34343</td>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Arrays</code></a></td>
+                  <td style="text-align: left">vector = [ ] <br> matriz = [ [3, 6],[1, 2] ] <br> matriz3 = [["a",
+                    "b"],["c"],["d", "e"]] <br> matriz =
+                    ['a' 2.0 3.1 ; 2.2 3.4 "r"]</td>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Strings</code></a></td>
+                  <td style="text-align: left"> x = "Hello world" <br> y = "Hola"</td>
+
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Char</code></a></td>
+                  <td style="text-align: left">x = 'a'<br>y = '$'</td>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Boolean</code></a></td>
+                  <td> x = <e style="color: blue;">true</e>
+                    <br>y = <e style="color: blue;">false</e>
+                  </td>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Struct</code></td>
+                  <td style="text-align: left">Struct punto <br>
+                    &#8195;x::Int <br>&#8195;y::Int <br>end</td>
+
+                </tr>
+                <tr>
+                  <td><code>Union</code></td>
+                  <td>Se genera la union: IntOrString = <Union>Int64, String</Union>
+                    <br>Después podemos generar datos de este tipo 56::IntOrString <br>"Hola"::IntOrString</td>
+
+                </tr>
+
+              </tbody>
+            </table>
+            <br>
+            <p>Segun la tabla, es bastante facil declarar variables de los tipos básicos, cabe destacar que en la
+              declaración de arrays es recomendable usar a = [1 2 3; 4 5 6] para declarar arreglos de multiples
+              dimensiones, ya para el compilador de Julia dice que no es lo mismo a = [[1, 2, 3], [4, 5, 6]]</p>
+            <img src="../img/Variables/variables5.jpg" alt="">
+            <p>También como se observa en la tabla los arrays pueden contener cualquier tipo de dato, ya que el
+              compilador tomará este array como un tipo abstracto <strong>any</strong></p>
+            <img src="../img/Variables/variables6.jpg" alt="">
+            <p>En julia existen funciones que generan datos de diferentes tipos</p>
+            <p>Un ejemplo muy claro es la función Zeros() o Zero()</p>
+            <img src="../img/Variables/variables7.jpg" alt="">
+
+
+            <p>Otra característica en Julia es que podemos declarar los tipos de cada variable, eso sí no podemos
+              definir los tipos de las
+              variables
+              globales, por lo que
+              nos limitan a tener que usar este método de declaración dentro de funciones o tipos de datos (como,
+              Struct): </p>
+            <p>En general el método es:</p>
+            <br>
+            <p><strong>nombre de variable :: Tipo de dato</strong></p>
+            <br>
+            <p>Cada tipo de dato que se presentaron en la tabla, contienen subtipos</p>
+            <p>Como es el caso de Int el cual podemos usar sus subtipos Int8, Int32, Int64, que difieren en el tamaño de
+              bits, esto nos dice que el valor maximo y minimo es diferente esto ocurre de igual manera con los tipos
+              float</p>
+            <img src="../img/Variables/variables8.jpg" alt="">
+            <img src="../img/Variables/variables9.jpg" alt="">
+            <p>Como se observo en la tabla existe otro operador para declarar variables el cual funciona solo para datos
+              especificos como: los Arrays y Unions</p>
+            <p><Strong>{ , } </Strong></p>
+            <p>Para los arrays la declaración es simple</p>
+            <p><Strong>Nombre de variable :: Array{Tipo de dato para el array, Dimensión}</Strong></p>
+            <p>Y para el tipo Union</p>
+            <p><Strong>Nombre de variable = Union{Tipo de dato 1, Tipo de dato 2, ....} </Strong></p>
+            <p>Estas son una cuantas característica de Julia respecto a las variables</p>
+
+          </div>
+          <!-- Fin contenedor articulo -->
+
+        </div>
+        <!-- Fin Contenedor Derecho -->
+
+      </div>
+    </div>
+
+
+    <script src="../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
