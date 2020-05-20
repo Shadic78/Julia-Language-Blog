@@ -64,8 +64,8 @@
             <h1>
               Variables y tipo de datos
             </h1>
-            <h2>Declaración variables</h2>
-            <p>Una variable en Julia es un nombre el cual tiene asociado un valor</p>
+            <h4>Variables</h4>
+            <p>Una variable es un nombre el cual tiene asociado un valor</p>
             <img src="../img/Variables/variables1.jpg" alt="">
             <p>Julia provee un sistema extremadamente flexible para nombrar variables. Los nombres de las variables son
               sensibles a minúsculas y mayúsculas, y no tienen significado semántico (es decir, el lenguaje no tratará
@@ -73,15 +73,15 @@
             <img src="../img/Variables/variables2.jpg" alt="">
             <p>La sintaxis es tan simple como hacer: </p>
             <img src="../img/Variables/variables3.jpg" alt="">
-            <h2>Reglas para la creación de variables</h2>
+            <h4>Reglas para la creación de variables</h4>
             <p>Los identificadores(variables) deberán empezar por una letra (A-Z o a-z), luego pueden seguir caracteres
               o números (0-9), algunos signos diacríticos u otros modificadores (- , _ ). Estos nombres no pueden ser
               palabras reservadas o signos que representen funciones (+, -, *, . , ,…)
               Existen casos especiales como:
             </p>
             <img src="../img/Variables/variables4.jpg" alt="">
-
-            <table style="margin: 20px 120px;">
+            <h4>Tipos de datos</h4>
+            <table>
               <tbody>
                 <tr>
                   <th style="text-align: left">Tipo</th>
@@ -130,9 +130,16 @@
                     &#8195;x::Int <br>&#8195;y::Int <br>end</td>
 
                 </tr>
+                <tr>
+                  <td><code>Union</code></td>
+                  <td>Se genera la union: IntOrString = <Union>Int64, String</Union>
+                    <br>Después podemos generar datos de este tipo 56::IntOrString <br>"Hola"::IntOrString</td>
+
+                </tr>
 
               </tbody>
             </table>
+            <br>
             <p>Segun la tabla, es bastante facil declarar variables de los tipos básicos, cabe destacar que en la
               declaración de arrays es recomendable usar a = [1 2 3; 4 5 6] para declarar arreglos de multiples
               dimensiones, ya para el compilador de Julia dice que no es lo mismo a = [[1, 2, 3], [4, 5, 6]]</p>
@@ -145,10 +152,30 @@
             <img src="../img/Variables/variables7.jpg" alt="">
 
 
-            <p>Otra cosa es que podemos declarar los tipos: </p>
-
-
-
+            <p>Otra característica en Julia es que podemos declarar los tipos de cada variable, eso sí no podemos
+              definir los tipos de las
+              variables
+              globales, por lo que
+              nos limitan a tener que usar este método de declaración dentro de funciones o tipos de datos (como,
+              Struct): </p>
+            <p>En general el método es:</p>
+            <br>
+            <p><strong>nombre de variable :: Tipo de dato</strong></p>
+            <br>
+            <p>Cada tipo de dato que se presentaron en la tabla, contienen subtipos</p>
+            <p>Como es el caso de Int el cual podemos usar sus subtipos Int8, Int32, Int64, que difieren en el tamaño de
+              bits, esto nos dice que el valor maximo y minimo es diferente esto ocurre de igual manera con los tipos
+              float</p>
+            <img src="../img/Variables/variables8.jpg" alt="">
+            <img src="../img/Variables/variables9.jpg" alt="">
+            <p>Como se observo en la tabla existe otro operador para declarar variables el cual funciona solo para datos
+              especificos como: los Arrays y Unions</p>
+            <p><Strong>{ , } </Strong></p>
+            <p>Para los arrays la declaración es simple</p>
+            <p><Strong>Nombre de variable :: Array{Tipo de dato para el array, Dimensión}</Strong></p>
+            <p>Y para el tipo Union</p>
+            <p><Strong>Nombre de variable = Union{Tipo de dato 1, Tipo de dato 2, ....} </Strong></p>
+            <p>Estas son una cuantas característica de Julia respecto a las variables</p>
 
           </div>
           <!-- Fin contenedor articulo -->
