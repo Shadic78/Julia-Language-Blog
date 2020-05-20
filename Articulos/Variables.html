@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../iconos/style.css" />
+  <link rel="stylesheet" href="../css/NewStyle.css" />
+  <title>Julia Programming Language</title>
+
+</head>
+
+<body>
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <!-- Header para la version de escritorio (MD) -->
+      <header class="col-12 col-md-4 Header-Escritorio">
+        <div class="row h-100 align-items-center">
+          <div class="Header-Img-Container">
+            <img src="../img/JuliaLogoHD.png" alt="JuliaLogo" style="width:85%;">
+            <!--<img src="img/JuliaPanelCut.png" alt="Commands">-->
+          </div>
+        </div>
+      </header>
+      <!-- Fin Header escritorio -->
+
+      <!-- Contenedor Derecho -->
+      <div class="col-12 col-md-8 Cont-Articulos">
+
+        <!-- Barra de navegacion -->
+        <div class="row">
+          <nav class="col-12 navbar navbar-expand-md navbar-light bg-light">
+            <figure class="invisibleLogo logo">
+              <img src="../img/JuliaLogoHD.png" width="70px">
+            </figure>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html"><span class="nav-opcion"><span
+                        class="icon-home"></span>Inicio</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="articulos/info.html"><span class="nav-opcion"><span
+                        class="icon-help-with-circle"></span>¿Quienes somos?</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Contenedor articulo -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-11 Full-Article-Container">
+
+            <h1>
+              Variables y tipo de datos
+            </h1>
+            <h2>Declaración variables</h2>
+            <p>Una variable en Julia es un nombre el cual tiene asociado un valor</p>
+            <img src="../img/Variables/variables1.jpg" alt="">
+            <p>Julia provee un sistema extremadamente flexible para nombrar variables. Los nombres de las variables son
+              sensibles a minúsculas y mayúsculas, y no tienen significado semántico (es decir, el lenguaje no tratará
+              las variables de manera diferente en función de sus nombres).</p>
+            <img src="../img/Variables/variables2.jpg" alt="">
+            <p>La sintaxis es tan simple como hacer: </p>
+            <img src="../img/Variables/variables3.jpg" alt="">
+            <h2>Reglas para la creación de variables</h2>
+            <p>Los identificadores(variables) deberán empezar por una letra (A-Z o a-z), luego pueden seguir caracteres
+              o números (0-9), algunos signos diacríticos u otros modificadores (- , _ ). Estos nombres no pueden ser
+              palabras reservadas o signos que representen funciones (+, -, *, . , ,…)
+              Existen casos especiales como:
+            </p>
+            <img src="../img/Variables/variables4.jpg" alt="">
+
+            <table style="margin: 20px 120px;">
+              <tbody>
+                <tr>
+                  <th style="text-align: left">Tipo</th>
+
+                  <th style="text-align: left">Asignación relacion</th>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Int</code></a></td>
+                  <td style="text-align: left">x = 2, y = 5666</td>
+
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Float</code></a></td>
+                  <td style="text-align: left"></td>
+                  <td style="text-align: left">8</td>
+                  <td style="text-align: left">0</td>
+                  <td style="text-align: left">2^8 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Arrays</code></a></td>
+                  <td style="text-align: left">✓</td>
+                  <td style="text-align: left">16</td>
+                  <td style="text-align: left">-2^15</td>
+                  <td style="text-align: left">2^15 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code>Strings</code></a></td>
+                  <td style="text-align: left"></td>
+                  <td style="text-align: left">16</td>
+                  <td style="text-align: left">0</td>
+                  <td style="text-align: left">2^16 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><code></code></a></td>
+                  <td style="text-align: left">✓</td>
+                  <td style="text-align: left">32</td>
+                  <td style="text-align: left">-2^31</td>
+                  <td style="text-align: left">2^31 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><a href="../../base/numbers/#Core.UInt32"><code>UInt32</code></a></td>
+                  <td style="text-align: left"></td>
+                  <td style="text-align: left">32</td>
+                  <td style="text-align: left">0</td>
+                  <td style="text-align: left">2^32 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><a href="../../base/numbers/#Core.Int64"><code>Int64</code></a></td>
+                  <td style="text-align: left">✓</td>
+                  <td style="text-align: left">64</td>
+                  <td style="text-align: left">-2^63</td>
+                  <td style="text-align: left">2^63 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><a href="../../base/numbers/#Core.UInt64"><code>UInt64</code></a></td>
+                  <td style="text-align: left"></td>
+                  <td style="text-align: left">64</td>
+                  <td style="text-align: left">0</td>
+                  <td style="text-align: left">2^64 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><a href="../../base/numbers/#Core.Int128"><code>Int128</code></a></td>
+                  <td style="text-align: left">✓</td>
+                  <td style="text-align: left">128</td>
+                  <td style="text-align: left">-2^127</td>
+                  <td style="text-align: left">2^127 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><a href="../../base/numbers/#Core.UInt128"><code>UInt128</code></a></td>
+                  <td style="text-align: left"></td>
+                  <td style="text-align: left">128</td>
+                  <td style="text-align: left">0</td>
+                  <td style="text-align: left">2^128 - 1</td>
+                </tr>
+                <tr>
+                  <td style="text-align: left"><a href="../../base/numbers/#Core.Bool"><code>Bool</code></a></td>
+                  <td style="text-align: left">N/A</td>
+                  <td style="text-align: left">8</td>
+                  <td style="text-align: left"><code>false</code> (0)</td>
+                  <td style="text-align: left"><code>true</code> (1)</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+          <!-- Fin contenedor articulo -->
+
+        </div>
+        <!-- Fin Contenedor Derecho -->
+
+      </div>
+    </div>
+
+
+    <script src="../js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
