@@ -96,76 +96,58 @@
                 </tr>
                 <tr>
                   <td style="text-align: left"><code>Float</code></a></td>
-                  <td style="text-align: left"></td>
-                  <td style="text-align: left">8</td>
-                  <td style="text-align: left">0</td>
-                  <td style="text-align: left">2^8 - 1</td>
+                  <td style="text-align: left">x = 2.0 <br> y = 123.34343</td>
+
                 </tr>
                 <tr>
                   <td style="text-align: left"><code>Arrays</code></a></td>
-                  <td style="text-align: left">✓</td>
-                  <td style="text-align: left">16</td>
-                  <td style="text-align: left">-2^15</td>
-                  <td style="text-align: left">2^15 - 1</td>
+                  <td style="text-align: left">vector = [ ] <br> matriz = [ [3, 6],[1, 2] ] <br> matriz3 = [["a",
+                    "b"],["c"],["d", "e"]] <br> matriz =
+                    ['a' 2.0 3.1 ; 2.2 3.4 "r"]</td>
+
                 </tr>
                 <tr>
                   <td style="text-align: left"><code>Strings</code></a></td>
-                  <td style="text-align: left"></td>
-                  <td style="text-align: left">16</td>
-                  <td style="text-align: left">0</td>
-                  <td style="text-align: left">2^16 - 1</td>
+                  <td style="text-align: left"> x = "Hello world" <br> y = "Hola"</td>
+
+
                 </tr>
                 <tr>
-                  <td style="text-align: left"><code></code></a></td>
-                  <td style="text-align: left">✓</td>
-                  <td style="text-align: left">32</td>
-                  <td style="text-align: left">-2^31</td>
-                  <td style="text-align: left">2^31 - 1</td>
+                  <td style="text-align: left"><code>Char</code></a></td>
+                  <td style="text-align: left">x = 'a'<br>y = '$'</td>
+
                 </tr>
                 <tr>
-                  <td style="text-align: left"><a href="../../base/numbers/#Core.UInt32"><code>UInt32</code></a></td>
-                  <td style="text-align: left"></td>
-                  <td style="text-align: left">32</td>
-                  <td style="text-align: left">0</td>
-                  <td style="text-align: left">2^32 - 1</td>
+                  <td style="text-align: left"><code>Boolean</code></a></td>
+                  <td> x = <e style="color: blue;">true</e>
+                    <br>y = <e style="color: blue;">false</e>
+                  </td>
+
                 </tr>
                 <tr>
-                  <td style="text-align: left"><a href="../../base/numbers/#Core.Int64"><code>Int64</code></a></td>
-                  <td style="text-align: left">✓</td>
-                  <td style="text-align: left">64</td>
-                  <td style="text-align: left">-2^63</td>
-                  <td style="text-align: left">2^63 - 1</td>
+                  <td style="text-align: left"><code>Struct</code></td>
+                  <td style="text-align: left">Struct punto <br>
+                    &#8195;x::Int <br>&#8195;y::Int <br>end</td>
+
                 </tr>
-                <tr>
-                  <td style="text-align: left"><a href="../../base/numbers/#Core.UInt64"><code>UInt64</code></a></td>
-                  <td style="text-align: left"></td>
-                  <td style="text-align: left">64</td>
-                  <td style="text-align: left">0</td>
-                  <td style="text-align: left">2^64 - 1</td>
-                </tr>
-                <tr>
-                  <td style="text-align: left"><a href="../../base/numbers/#Core.Int128"><code>Int128</code></a></td>
-                  <td style="text-align: left">✓</td>
-                  <td style="text-align: left">128</td>
-                  <td style="text-align: left">-2^127</td>
-                  <td style="text-align: left">2^127 - 1</td>
-                </tr>
-                <tr>
-                  <td style="text-align: left"><a href="../../base/numbers/#Core.UInt128"><code>UInt128</code></a></td>
-                  <td style="text-align: left"></td>
-                  <td style="text-align: left">128</td>
-                  <td style="text-align: left">0</td>
-                  <td style="text-align: left">2^128 - 1</td>
-                </tr>
-                <tr>
-                  <td style="text-align: left"><a href="../../base/numbers/#Core.Bool"><code>Bool</code></a></td>
-                  <td style="text-align: left">N/A</td>
-                  <td style="text-align: left">8</td>
-                  <td style="text-align: left"><code>false</code> (0)</td>
-                  <td style="text-align: left"><code>true</code> (1)</td>
-                </tr>
+
               </tbody>
             </table>
+            <p>Segun la tabla, es bastante facil declarar variables de los tipos básicos, cabe destacar que en la
+              declaración de arrays es recomendable usar a = [1 2 3; 4 5 6] para declarar arreglos de multiples
+              dimensiones, ya para el compilador de Julia dice que no es lo mismo a = [[1, 2, 3], [4, 5, 6]]</p>
+            <img src="../img/Variables/variables5.jpg" alt="">
+            <p>También como se observa en la tabla los arrays pueden contener cualquier tipo de dato, ya que el
+              compilador tomará este array como un tipo abstracto <strong>any</strong></p>
+            <img src="../img/Variables/variables6.jpg" alt="">
+            <p>En julia existen funciones que generan datos de diferentes tipos</p>
+            <p>Un ejemplo muy claro es la función Zeros() o Zero()</p>
+            <img src="../img/Variables/variables7.jpg" alt="">
+
+
+            <p>Otra cosa es que podemos declarar los tipos: </p>
+
+
 
 
           </div>
