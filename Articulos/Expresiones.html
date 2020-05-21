@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../iconos/style.css" />
+  <link rel="stylesheet" href="../css/NewStyle.css" />
+  <title>Julia Programming Language</title>
+
+</head>
+
+<body>
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <!-- Header para la version de escritorio (MD) -->
+      <header class="col-12 col-md-4 Header-Escritorio">
+        <div class="row h-100 align-items-center">
+          <div class="Header-Img-Container">
+            <img src="../img/JuliaLogoHD.png" alt="JuliaLogo" style="width:85%;">
+            <!--<img src="img/JuliaPanelCut.png" alt="Commands">-->
+          </div>
+        </div>
+      </header>
+      <!-- Fin Header escritorio -->
+
+      <!-- Contenedor Derecho -->
+      <div class="col-12 col-md-8 Cont-Articulos">
+
+        <!-- Barra de navegacion -->
+        <div class="row">
+          <nav class="col-12 navbar navbar-expand-md navbar-light bg-light">
+            <figure class="invisibleLogo logo">
+              <img src="../img/JuliaLogoHD.png" width="70px">
+            </figure>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html"><span class="nav-opcion"><span
+                        class="icon-home"></span>Inicio</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="articulos/info.html"><span class="nav-opcion"><span
+                        class="icon-help-with-circle"></span>¿Quienes somos?</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Contenedor articulo -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-11 Full-Article-Container">
+
+            <h1>Expresiones</h1>
+            <p>
+              El lenguaje Julia provee distintos tipos de expresiones que pueden utilizarce
+              para distintos propositos. Los tipos de expresiones se dividen en:
+          </p>
+          <ul>
+            <li>Aritméticas</li>
+            <li>De asignación</li>
+            <li>Relacionales</li>
+            <li>Booleanas</li>
+          </ul>
+
+          <h4>Expresiones aritméticas</h4>
+          <table style="margin:0 auto;">
+            <th>Expresión</th>
+            <th>Descripción</th>
+            <tr>
+              <td>-x</td>
+              <td>Multiplica por (-1) el operando</td>
+            </tr>
+            <tr>
+              <td>x + y</td>
+              <td>Suma los operandos</td>
+            </tr>
+            <tr>
+              <td>x - y</td>
+              <td>Le resta el segundo operando al primer operando</td>
+            </tr>
+            <tr>
+              <td>x * y</td>
+              <td>Multiplica los operandos</td>
+            </tr>
+            <tr>
+              <td>x / y</td>
+              <td>Divide el primer operando entre el segundo</td>
+            </tr>
+            <tr>
+              <td>x \ y</td>
+              <td>Divide el segundo operando entre el primero</td>
+            </tr>
+            <tr>
+              <td>x ÷ y</td>
+              <td>Divide el primer operando entre el segundo y el resultado se convierte a entero</td>
+            </tr>
+            <tr>
+              <td>x ^ y</td>
+              <td>Eleva el primer operando a la potencia que indique el segundo operando</td>
+            </tr>
+            <tr>
+              <td>x % y</td>
+              <td>Devuelve el residuo de la división entera del primer operando por el segundo</td>
+            </tr>
+          </table>
+
+          <br /><br />
+          <h4>Expresiones de asignación</h4>
+          <table style="margin:0 auto;">
+            <th>Expresión</th>
+            <th>Descripción</th>
+            <tr>
+              <td>x = y</td>
+              <td>Asigna el valor de (y) a (x)</td>
+            </tr>
+            <tr>
+              <td>x += y</td>
+              <td>Le suma (y) al valor de (x)</td>
+            </tr>
+            <tr>
+              <td>x -= y</td>
+              <td>Le resta (y) al valor de (x)</td>
+            </tr>
+            <tr>
+              <td>x *= y</td>
+              <td>Multiplica (x) por (y) y el resultado se asigna a (x)</td>
+            </tr>
+            <tr>
+              <td>x /= y</td>
+              <td>Divide (x) entre (y) y el resultado se asigna a (x)</td>
+            </tr>
+            <tr>
+              <td>x \= y</td>
+              <td>Divide (y) entre (x) y el resultado se asigna a (x)</td>
+            </tr>
+            <tr>
+              <td>x %= y</td>
+              <td>Obtiene el residuo de la división (x / y) y lo asigna a (x)</td>
+            </tr>
+            <tr>
+              <td>x ^= y</td>
+              <td>Eleva (x) a la potencia (y) y lo asigna a (x)</td>
+            </tr>
+          </table>
+
+          <br /><br />
+          <h4>Expresiones relacionales</h4>
+          <table style="margin:0 auto;">
+            <th>Expresión</th>
+            <th>Descripción</th>
+            <tr>
+              <td>x == y</td>
+              <td>Devuelve True si (x) y (y) tienen el mismo valor</td>
+            </tr>
+            <tr>
+              <td>x != y</td>
+              <td>Devuelve True si (x) y (y) no tienen el mismo valor</td>
+            </tr>
+            <tr>
+              <td>x < y</td>
+              <td>Devuelve True si (x) es menor que (y)</td>
+            </tr>
+            <tr>
+              <td>x <= y</td>
+              <td>Devuelve True si (x) es menor o igual que (y)</td>
+            </tr>
+            <tr>
+              <td>x > y</td>
+              <td>Devuelve True si (x) es mayor que (y)</td>
+            </tr>
+            <tr>
+              <td>x >= y</td>
+              <td>Devuelve True si (x) es mayor o igual que (y)</td>
+            </tr>
+          </table>
+
+          <br /><br />
+          <h4>Expresiones booleanas</h4>
+          <table style="margin:0 auto;">
+            <th>Expresión</th>
+            <th>Descripción</th>
+            <tr>
+              <td>x || y</td>
+              <td>Devuelve True si (x) o (y) son True</td>
+            </tr>
+            <tr>
+              <td>x && y</td>
+              <td>Devuelve True si (x) y (y) son True</td>
+            </tr>
+            <tr>
+              <td>!x</td>
+              <td>Devuelve True si (x) es False</td>
+            </tr>
+          </table>
+
+          <br /><br />
+          <h4>Precedencia y asociatividad</h4>
+          <p>
+            La siguiente tabla contiene las reglas de precedencia y asociatividad de los
+            operadores de Julia. La precedencia de los operadores va de mayor a menor precedencia por filas.
+          </p>
+          <table style="margin:0 auto;">
+            <th>Categoría</th>
+            <th>Operadores</th>
+            <th>Asociatividad</th>
+            <tr>
+              <th>Unarios</th>
+              <td>+ -</td>
+              <td>Derecha</td>
+            </tr>
+            <tr>
+              <th>Multiplicación</th>
+              <td>* / % & \ ÷</td>
+              <td>Izquierda</td>
+            </tr>
+            <tr>
+              <th>Adición (binaria)</th>
+              <td>+ -</td>
+              <td>Izquierda</td>
+            </tr>
+            <tr>
+              <th>Comparación</th>
+              <td>> < >= <= == !=</td>
+              <td>No asociativo</td>
+            </tr>
+            <tr>
+              <th>Flujo de control</th>
+              <td>&& seguido de ||</td>
+              <td>Derecha</td>
+            </tr>
+            <tr>
+              <th>Asignación</th>
+              <td>= += -= *= /= \= ^= ÷= %=</td>
+              <td>Derecha</td>
+            </tr>
+          </table>
+
+          </div>
+        </div>
+        <!-- Fin contenedor articulo -->
+
+      </div>
+      <!-- Fin Contenedor Derecho -->
+
+    </div>
+  </div>
+
+
+  <script src="../js/jquery-3.2.1.slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
