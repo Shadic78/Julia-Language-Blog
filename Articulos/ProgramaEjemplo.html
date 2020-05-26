@@ -73,23 +73,25 @@
             <p>Para la escritura de código, se puede utilizar cualquier editor de texto, existen entornos de desarrollo
               (IDE) que actúan como extensiones de editores de texto, un ejemplo es Juno el cual es un IDE que puede
               instalarse mediante el editor de código Atom.
-              Para ejecutarlo existen alternativas, eso sí ya tienes instalado julia en tu computador, de no ser así te
-              invito a ver <a href="../Articulos/InstalacionLenguaje">Instalacion Julia</a>.
-              Una de ellas es tener instalado el compilador de Julia, luego instalar las extensiones de un editor de
+              Para ejecutarlo existen alternativas, eso sí, ya tienes instalado julia en tu computador, de no ser así te
+              invito a ver <a href="../Articulos/InstalacionLenguaje">Enlace Instalacion Julia</a>.
+              Una alternativa es tener instalado el compilador de Julia, luego instalar las extensiones de un editor de
               código como Atom o Visual Studio Code y ejecutarlo directamente desde las terminales de estos editores de
               código.
-              Otra opción es abrir el compilador julia
+              Otra opción es abrir el compilador julia;
             </p>
             <img src="../img/Programa/programa1.jpg" alt="">
             <p>E insertar la ruta del archivo usando la siguiente sintaxis:</p>
             <p><strong>Include("Ruta/ carpeta 1/archivo.jl ")</strong></p>
             <p>
-              Con esto el programa empezará su ejecución dentro de la misma ventana.
+              Con esto el programa empezará su ejecución dentro de la misma ventana del compilador.
             </p>
-            <p> Para evitar fallos o simplemente no se ve a la tarea de instalar Julia, les dejo un compilador Online el
-              cual puede ver por completo el código y ejecutarlo.
+            <p> Para evitar fallos o simplemente no se ve a la necesidad de instalar Julia, les dejo un compilador
+              Online el
+              cual puede ver por completo el código y ejecutarlo, este se encuentra al final del articulo con el codigo
+              completo del programa.
             </p>
-            <p>Pero primero veremos de que se tratá el programa</p>
+            <p>Primero veremos de que se tratá el programa</p>
             <p>El problema es el siguiente: </p>
             <p> Desarrollar un programa que calcule la distancia más corta entre dos nodos de un grafo. El programa
               recibirá como entrada la especificación de un grafo (nodos y enlaces con peso, el nodo inicial y el nodo
@@ -103,35 +105,81 @@
             <p>1. Generar un nuevo grafo con un máximo de vertices</p>
             <p>2. Agregar los vertices que necesites dependiento sin pasarse del máximo de vertices</p>
             <p>3. Enlazar los vertices con sus respectivos pesos</p>
-            <p>Luego de esto usted podrá usar la opción de >encontrar recorrido más corto</p>
-            <p>Cabe destacar que el programa ya viene con un grafo de ejemplo, esta función se encarga de generarlos</p>
+            <p>Luego de esto usted podrá usar la opción de >encontrar recorrido más corto.</p>
+            <p>Cabe destacar que el programa ya viene con un grafo de ejemplo, esta función se encarga de generarlos.
+            </p>
             <img src="../img/Programa/programa3.jpg" alt="">
+
+
+            <h3>Las estructuras utilizadas</h3>
+            <p>Para la implementación de este problema se utilizó los tipos de datos: </p>
+            <p><strong>Struct</strong></p>
+            <p>El cual se emplea para representar las estructuras de Vertice y Grafo.</p>
+            <p>Es una tipo de dato importante ya que nos permite agrupar otros tipos de datos, como en el caso de
+              <strong>Grafo</strong>, el cual
+              agrupa:</p>
+            <p>Un Array de dimensión 2, para representar una matriz de adyacencia, que nos servirá para representar un
+              grafo.</p>
+            <p>Un entero que nos sirve para conocer el numero de vertices que el grafo tiene actualmente.</p>
+            <p>Un array de dimensión 1 que nos sirve para almacenar los vertices de un grafo.</p>
+            <p>Cabe destacar que se usaron un modificador para estas estructuras que son los mutables, lo que esto
+              significa es que los datos de la estructura pueden modificarse, si esto no lo tuviera no podriamos
+              modificar estos datos.</p>
+            <img src="../img/Programa/programa4.jpg" alt="">
+            <p><strong>Métodos</strong></p>
+            <p>Los métodos son estructuras que tienen el funcionamiento de una función, pero es mucho más simple, y
+              estos mayormente se utilizan para retornar valores que no necesitan muchas operaciones.</p>
+            <img src="../img/Programa/programa8.jpg" alt="">
+            <img src="../img/Programa/programa7.jpg" alt="">
+            <p><strong>Funciones</strong></p>
+            <p>Las funciones son algo muy importante para la elaboración de este programa, ya que en la mayoriá se basa
+              en usar funciones, donde muchas de estas funciones tienen como parámetro una variable de tipo Grafo, ya
+              que estás funciones son para utilizarse en un grafo.</p>
+            <img src="../img/Programa/programa5.jpg" alt="">
+            <img src="../img/Programa/programa6.jpg" alt="">
+            <p><strong>Arrays</strong></p>
+            <p>Los arrays son muy importantes, ya que nos sirven para representar los vertices y aristas de los grafos.
+              Para la representación de un grafo es necesario utilizar una Matriz de adyacencia o una lista de
+              adyacencia,
+              que son las estructuras más utilizadas para representar un grafo.
+              Por lo tanto sin este tipo de dato el programa simplemente no funcionaría.
+            </p>
+            <img src="../img/Programa/programa9.jpg" alt="">
+            <img src="../img/Programa/programa10.jpg" alt="">
+            <p>Las funciones <strong>fill</strong> retornan un array, con las especificaciones de sus parámetros.</p>
+
+            <h4>Ejecución</h4>
+            <p>Al momento de ejecutar el archivo Grafos.jl, se presenta el siguiente menu: </p>
+            <img src="../img/Programa/programa11.jpg" alt="">
+            <p>Visto esto lo único que necesita es seleccionar una opcion, con las teclas direccionales del teclado.</p>
+            <img src="../img/Programa/programa12.jpg" alt="">
+            <p>Luego de esto está la opcion de agregar vertice el cuál presentara un espacio para escribir el nombre,
+              después de escribirlo solo presiona enter para continuar la ejecución.
+            </p>
+            <img src="../img/Programa/programa13.jpg" alt="">
+            <p>La opción Enlazar vertices, primero muestra una lista de los vertices disponibles, luego de esto el
+              programa pide que ingreses un nombre del vertice de origen luego el vertice destino, para enlazar estos
+              dos vertices y después ponerles un peso a este enlace.</p>
+            <p>El listado de vertices nos dice: Vertice: Nombre de vertice #Numero de vertice.</p>
+            <img src="../img/Programa/programa14.jpg" alt="">
+            <p>La opción Calcular ruta más corta, nos presenta una lista de vertices, luego de esto nos pide ingresar un
+              nombre para el vertice donde iniciará la ruta y el vertice destino, después de continuar dando enter
+              comenzará a realizar los calculos, para luego imprimir en pantalla la distancia más corta entre el vertice
+              origen y el destino, y la ruta de la que pertenece esta distancia.</p>
+            <img src="../img/Programa/programa15.jpg" alt="">
+            <p>La ultima opción es: Generar nuevo grafo, el cual presenta un espacio para escribir el máximo de vertices
+              para el nuevo grafo, después de esto el grafo de ejemplo se perderá y podra agregar nuevos vertices y
+              enlaces, para contruir un grafo desde cero.</p>
+            <img src="../img/Programa/programa16.jpg" alt="">
+
+
             <p>El siguiente es el programa de ejemplo, solo necesita presionar ejecutar y el programa se iniciará,
-              mostrandole un pequeño menu en el cual tendrá que seleccionar una opción</p>
+              mostrandole un pequeño menu en el cual tendrá que seleccionar una opción.</p>
             <div>
               <iframe height="600px" width="100%" src="https://repl.it/@SonBear/Julia-Programa-Grafos?lite=true"
                 scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
                 sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </div>
-
-            <h3>Las estructuras utilizadas</h3>
-            <p>Para la implementación de este problema se utilizó los tipos de datos</p>
-            <p><strong>Struct</strong></p>
-            <p>El cual se emplea para representar las estructuras de Vertice y Grafo</p>
-            <p>Ya que esta estructura nos permite agrupar otros tipos, como en el caso de Grafo, el cual agrupa:</p>
-            <p> un Array de dimensión 2, para representar una matriz de adyacencia, que nos servirá para representar un
-              grafo</p>
-            <p>un entero que nos sirve para conocer el numero de vertices que el grafo tiene actualmente</p>
-            <p>un array de dimensión 1 que nos sirve para almacenar los vertices de un grafo</p>
-            <img src="../img/Programa/programa4.jpg" alt="">
-            <p><strong>métodos</strong></p>
-            <p><strong>funciones</strong></p>
-            <p><strong>métodos</strong></p>
-
-
-
-
-
           </div>
         </div>
         <!-- Fin contenedor articulo -->
