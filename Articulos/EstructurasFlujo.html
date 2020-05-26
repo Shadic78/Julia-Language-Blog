@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../iconos/style.css" />
+  <link rel="stylesheet" href="../css/NewStyle.css" />
+  <title>Julia Programming Language</title>
+
+</head>
+
+<body>
+
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+
+      <!-- Header para la version de escritorio (MD) -->
+      <header class="col-12 col-md-4 Header-Escritorio">
+        <div class="row h-100 align-items-center">
+          <div class="Header-Img-Container">
+            <img src="../img/JuliaLogoHD.png" alt="JuliaLogo" style="width:85%;">
+            <!--<img src="img/JuliaPanelCut.png" alt="Commands">-->
+          </div>
+        </div>
+      </header>
+      <!-- Fin Header escritorio -->
+
+      <!-- Contenedor Derecho -->
+      <div class="col-12 col-md-8 Cont-Articulos">
+
+        <!-- Barra de navegacion -->
+        <div class="row">
+          <nav class="col-12 navbar navbar-expand-md navbar-light bg-light">
+            <figure class="invisibleLogo logo">
+              <img src="../img/JuliaLogoHD.png" width="70px">
+            </figure>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html"><span class="nav-opcion"><span
+                        class="icon-home"></span>Inicio</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="articulos/info.html"><span class="nav-opcion"><span
+                        class="icon-help-with-circle"></span>¿Quienes somos?</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- Fin barra de navegacion -->
+
+        <!-- Contenedor articulo -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-11 Full-Article-Container">
+
+            <h1>Estructuras de control de flujo</h1>
+            <p>
+              El lenguaje Julia provee distintos tipos de estructuras para controlar
+              el flujo del programa. Algunas de ellas son:
+          </p>
+          <ul>
+            <li>Evaluación condicional</li>
+            <li>Evaluación repetida</li>
+          </ul>
+
+          <h4>Evaluación condicional</h4>
+          <p>
+            La estructura de evaluación condicional del lenguaje Julia es el <strong>if</strong>.
+            Julia no soporta la estructura de selección múltiple <strong>Switch-Case</strong>
+            como sí lo hacen otros lenguajes de programación como Java o C#, por lo que
+            para controlar el flujo del programa por medio de condicionales deberemos utilizar
+            la estructura if.
+          </p>
+          <p>
+            La estructura <strong>if</strong> permite que segmentos de código sean
+            o no sean evaluados dependiendo del valor de una <strong><a href="Expresiones.html">expresión booleana</a></strong>.<br>
+            La sintáxis de la estructura <strong>if</strong> es la siguiente:
+          </p>
+
+          <hr>
+          <p><strong style="font-size:1.3em;">if simple</strong></p>
+          <p>
+              <strong>if </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>end</strong>
+              <p>Si la expresión es true entonces se ejecutan las sentencias</p>
+          </p>
+
+          <hr>
+          <p><strong style="font-size:1.3em;">if-else</strong></p>
+          <p>
+              <strong>if </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>else</strong><br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>end</strong>
+          </p>
+          <p>Si la primera expresión del <strong>if</strong> no es true, entonces se ejecutan las sentencias
+          del else</p>
+
+          <hr>
+          <p><strong style="font-size:1.3em;">if-elseif</strong></p>
+          <p>
+              <strong>if </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>elseif </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>end</strong>
+          </p>
+          <p>Si la primera expresión del <strong>if</strong> no es true, entonces
+            se evalúan las expresiones de los elseif y si alguno da true, se ejecutan las sentencias de dicho <strong>elseif</strong>.<br>
+             En esta estructura se pueden agregar todos los <strong>elseif</strong> que se quieran.</p>
+
+          <hr>
+          <p><strong style="font-size:1.3em;">if-elseif-else</strong></p>
+          <p>
+              <strong>if </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>elseif </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>else</strong><br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>end</strong>
+          </p>
+          <p>En esta estructura se pueden agregar todos los <strong>elseif</strong> que se quieran.</p>
+
+          <h5>Ejemplo de uso de la evaluación condicional:</h5>
+          <img src="../img/EstructurasFlujo/1.png" alt="if">
+          <p>
+            En esta función se evalúan dos numeros x & y para identificar si x es menor, mayor o igual a y. <br>
+            Si llamamos a la función de la siguiente manera: <strong>test(2, 1)</strong>, se imprimira en la consola
+            "x is greater than y.", si probamos con <strong>test(3, 4)</strong> obtendremos como resultado  "x is less than y."
+            y si probamos con <strong>test(5, 5)</strong> obtendremos como resultado "x is equal to y."
+          </p>
+
+
+          <br />
+          <h4>Evaluación repetida</h4>
+          <p>
+            En en lenguaje de programación Julia hay dos estructuras que permiten realizar evaluaciones
+            repetidas, los bucles <strong>while</strong> y <strong>for</strong>.
+          </p>
+          <p><strong style="font-size:1.3em;">Bucle while</strong></p>
+          <p>
+            El bucle <strong>while</strong> evalúa una expresión booleana y
+            mientras dicha expresión sea true ejecutara el código del cuerpo del while.<br />
+            Si en el programa se llega al bucle while y la expresión es false, entonces no se
+            ejecutara el cuerpo del while ni una sola vez.
+          </p>
+          <p>Sintaxis del bucle while:</p>
+          <p>
+              <strong>while </strong> &lt;expresión&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>end</strong>
+          </p>
+
+          <h5>Ejemplo de uso del bucle while:</h5>
+          <img src="../img/EstructurasFlujo/2.png" alt="while">
+          <p>
+            El programa de la imagen imprime los números del 1 al 5, utiliza un bucle <strong>while</strong> que se ejecutara
+            mientras la variable <strong>i</strong> sea menor o igual a 5. <br />
+            Si la expresión booleana del while nunca da false, entonces el bucle sera infinito.
+          </p>
+
+          <br />
+          <p><strong style="font-size:1.3em;">Bucle for</strong></p>
+          <p>
+            El bucle <strong>for</strong> permite realizar evaluaciones repetidas de una manera mas
+            "natural" que el <strong>while</strong>. Por ejemplo, las operaciones como contar números
+            pueden expresarse de una manera mas concisa con el <strong>for</strong>.
+          </p>
+          <p>Sintaxis del bucle for:</p>
+          <p>
+              <strong>for </strong> &lt;rango&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;sentencias&gt;<br />
+              <strong>end</strong>
+          </p>
+          <p>
+            En la estructura <strong>for</strong> &lt;rango&gt; es un objeto de tipo <strong>range</strong>.<br />
+          </p>
+          <h5>Ejemplo de uso del bucle for:</h5>
+          <img src="../img/EstructurasFlujo/3.png" alt="while">
+          <p>
+            El programa de la imagen realiza la misma acción que el ejemplo del <strong>while</strong>,
+            pero la sintaxis es mas "natural".<br />
+            En la imagen <strong>1:5</strong> es el objeto de tipo <strong>range</strong>.<br />
+            Cabe destacar que en un bucle <strong>for</strong> si la variable que se utiliza no ha sido declarada
+            fuera del <strong>for</strong>, entonces dicha variable solo sera visible en el interior del <strong>for</strong>.
+          </p>
+
+          </div>
+        </div>
+        <!-- Fin contenedor articulo -->
+
+      </div>
+      <!-- Fin Contenedor Derecho -->
+
+    </div>
+  </div>
+
+
+  <script src="../js/jquery-3.2.1.slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
