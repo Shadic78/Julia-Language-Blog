@@ -65,7 +65,7 @@
               Variables y tipo de datos
             </h1>
             <h4>Variables</h4>
-            <p>Una variable es un nombre el cual tiene asociado un valor</p>
+            <p>Una variable es un nombre el cúal tiene asociado un valor: </p>
             <img src="../img/Variables/variables1.jpg" alt="">
             <p>Julia provee un sistema extremadamente flexible para nombrar variables. Los nombres de las variables son
               sensibles a minúsculas y mayúsculas, y no tienen significado semántico (es decir, el lenguaje no tratará
@@ -132,7 +132,7 @@
                 </tr>
                 <tr>
                   <td><code>Union</code></td>
-                  <td>Se genera la union: IntOrString = <Union>Int64, String</Union>
+                  <td>Se genera la union: IntOrString = Union{Int64, String}
                     <br>Después podemos generar datos de este tipo 56::IntOrString <br>"Hola"::IntOrString</td>
 
                 </tr>
@@ -140,15 +140,15 @@
               </tbody>
             </table>
             <br>
-            <p>Segun la tabla, es bastante facil declarar variables de los tipos básicos, cabe destacar que en la
+            <p>Según la tabla, es bastante fácil declarar variables de los tipos básicos, cabe destacar que en la
               declaración de arrays es recomendable usar a = [1 2 3; 4 5 6] para declarar arreglos de multiples
-              dimensiones, ya para el compilador de Julia dice que no es lo mismo a = [[1, 2, 3], [4, 5, 6]]</p>
+              dimensiones, ya para el compilador de Julia dice que no es lo mismo a = [[1, 2, 3], [4, 5, 6]].</p>
             <img src="../img/Variables/variables5.jpg" alt="">
             <p>También como se observa en la tabla los arrays pueden contener cualquier tipo de dato, ya que el
-              compilador tomará este array como un tipo abstracto <strong>any</strong></p>
+              compilador tomará este array como un tipo abstracto <strong>Any</strong>.</p>
             <img src="../img/Variables/variables6.jpg" alt="">
             <p>En julia existen funciones que generan datos de diferentes tipos</p>
-            <p>Un ejemplo muy claro es la función Zeros() o Zero()</p>
+            <p>Un ejemplo muy claro es la función zeros() o fill().</p>
             <img src="../img/Variables/variables7.jpg" alt="">
 
 
@@ -162,20 +162,20 @@
             <br>
             <p><strong>nombre de variable :: Tipo de dato</strong></p>
             <br>
-            <p>Cada tipo de dato que se presentaron en la tabla, contienen subtipos</p>
-            <p>Como es el caso de Int el cual podemos usar sus subtipos Int8, Int32, Int64, que difieren en el tamaño de
+            <p>Cada tipo de dato que se presentaron en la tabla, contienen subtipos.</p>
+            <p>Como es el caso de Int el cual podemos usar los subtipos Int8, Int32, Int64, que difieren en el tamaño de
               bits, esto nos dice que el valor maximo y minimo es diferente esto ocurre de igual manera con los tipos
-              float</p>
+              float.</p>
             <img src="../img/Variables/variables8.jpg" alt="">
             <img src="../img/Variables/variables9.jpg" alt="">
             <p>Como se observo en la tabla existe otro operador para declarar variables el cual funciona solo para datos
-              especificos como: los Arrays y Unions</p>
+              especificos como: los Arrays y Unions.</p>
             <p><Strong>{ , } </Strong></p>
-            <p>Para los arrays la declaración es simple</p>
+            <p>Para los arrays la declaración es simple: </p>
             <p><Strong>Nombre de variable :: Array{Tipo de dato para el array, Dimensión}</Strong></p>
-            <p>Y para el tipo Union</p>
+            <p>Y para el tipo Union: </p>
             <p><Strong>Nombre de variable = Union{Tipo de dato 1, Tipo de dato 2, ....} </Strong></p>
-            <p>Estas son una cuantas característica de Julia respecto a las variables</p>
+            <p>Estas son una cuantas característica de Julia respecto a las variables.</p>
 
           </div>
           <!-- Fin contenedor articulo -->

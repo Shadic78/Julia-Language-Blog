@@ -66,51 +66,46 @@
             </h1>
 
             <!--Parte del sintaxis-->
-            <p style="text-align: center;">
-              <strong>Sintaxis de la declaracion de una funcion: </strong>
-            </p>
+            <h3>Sintaxis</h3>
             <p>
-              Ejemplo de sintaxis
+              Ejemplo de sintaxis:
             </p>
             <img src="../img/Subprogramas/Declaracion.JPG" alt="1">
-            <p>Ejemplo de Sintaxis de una funcion recursiva</p>
+            <p>Ejemplo de Sintaxis de una función recursiva: </p>
             <img src="../img/Subprogramas/FuncionFibonacci.JPG" alt="2">
             <p>
-              Como se puede observar ambas declaraciones son validas, una esta hecha desde la consola de Julia, mientras
+              Como se puede observar ambas declaraciones son válidas, una esta hecha desde la consola de Julia, mientras
               que la otra esta en un texto plano.
-
             </p>
             <!--Fin parte del sintaxis-->
             <!--Parte para los parametros-->
-            <p style="text-align: center;">
-              <strong>Argumentos / Parámetros </strong>
-            </p>
+            <h3>Argumentos ó parámetros </h3>
             <p>
               Julia puede reconocer los tipos de los argumentos de las funciones, pero de igual manera podemos
               especificar un tipo de dato concreto.
             </p>
-            <p>Ejemplo sin declarar los datos</p>
+            <p>Ejemplo sin declarar los datos:</p>
             <img src="../img/Subprogramas/ParametroSinTipo.JPG" alt="3">
             <p>Como se puede observar el parámetro <strong>a</strong> funciona como una matriz, siempre y cuando a esta
-              función le pasemos una matriz de argumento, si esto no ocurriera nos imprimiría un error</p>
-            <p>Ejemplo con los tipos declarados</p>
+              función le pasemos una matriz de argumento, si esto no ocurriese nos imprimiría un error.</p>
+            <p>Ejemplo con los tipos declarados:</p>
             <img src="../img/Subprogramas/ParametrosTiposEscritos.JPG" alt="4">
-            <p>Aqui podemos ver que explicitamente nos pide dos Array de dimension 2, de tipo Int64, esto hace
+            <p>Aqui podemos ver que explícitamente nos pide dos Array de dimension 2, de tipo Int64, esto hace
               referencia a una matriz
-              de enteros</p>
+              de enteros.</p>
 
             <p></p>
 
             <p>Si aun no entiende bien los tipos de datos, recomiendo hechar un vistazo a esa parte primero <a
-                href="../Articulos/Variables.html">Variables</a></p>
+                href="../Articulos/Variables.html">Articulo variables en julia.</a></p>
 
             <!--Fin parte de los parametros-->
-
-            <p>¿Paso por referencia ó por valor?</p>
             <p style="text-align: center;">
-              <strong>NO, ¿Pass by Sharing / "pasar por compartir"?</strong>
+              <strong>¿Paso por referencia ó por valor?</strong>
             </p>
-            <p>Los argumentos de la función de Julia siguen una convención a veces llamada "pasar por compartir", lo que
+            <h3>NO, ¿Pass by Sharing / "pasar por compartir"?</h3>
+            <p>Los argumentos de las funciones de Julia siguen una convención a veces llamada "pasar por compartir", lo
+              que
               significa que los valores no se copian cuando se pasan a las funciones. Los argumentos de función en sí
               mismos actúan como nuevos enlaces de variables (nuevas ubicaciones que pueden referirse a valores), pero
               los valores a los que se refieren son idénticos a los valores pasados. Las modificaciones a los valores
@@ -123,7 +118,7 @@
               se
               refiere un enlace(espacio en memoria) en el alcance de la llamada reasignando a un argumento en la función
               que se llama; si
-              reasigna un argumento, el enlace en el La persona que llama no ha cambiado.</p>
+              reasigna un argumento, el enlace de la persona que llama no ha cambiado.</p>
 
           </div>
         </div>

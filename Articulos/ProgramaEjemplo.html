@@ -71,14 +71,16 @@
               generar código
               máquina nativo.</p>
             <p>Para la escritura de código, se puede utilizar cualquier editor de texto, existen entornos de desarrollo
-              (IDE) que actúan como extensiones de editores de texto, un ejemplo es Juno el cual es un IDE que puede
-              instalarse mediante el editor de código Atom.
-              Para ejecutarlo existen alternativas, eso sí, ya tienes instalado julia en tu computador, de no ser así te
-              invito a ver <a href="../Articulos/InstalacionLenguaje">Enlace Instalacion Julia</a>.
-              Una alternativa es tener instalado el compilador de Julia, luego instalar las extensiones de un editor de
-              código como Atom o Visual Studio Code y ejecutarlo directamente desde las terminales de estos editores de
-              código.
-              Otra opción es abrir el compilador julia;
+              (IDE) que actúan como extensiones de editores de texto, un ejemplo es <a
+                href="../Articulos/InstalacionLenguaje.html">Juno</a> el cual es un IDE que puede
+              instalarse mediante el editor de texto, Atom.
+              Para ejecutar un código existen alternativas, eso sí, ya tienes instalado julia en tu computador, de no
+              ser así te
+              invito a ver <a href="../Articulos/InstalacionLenguaje.html">artículo instalación Julia</a>.
+              Una de estas alternativas es tener instalado el compilador de Julia, luego instalar las extensiones de un
+              editor de
+              texto como Atom o Visual Studio Code y ejecutarlo directamente desde las terminales de estos editores.
+              Otra opción es abrir el compilador julia:
             </p>
             <img src="../img/Programa/programa1.jpg" alt="">
             <p>E insertar la ruta del archivo usando la siguiente sintaxis:</p>
@@ -87,10 +89,11 @@
               Con esto el programa empezará su ejecución dentro de la misma ventana del compilador.
             </p>
             <p> Para evitar fallos o simplemente no se ve a la necesidad de instalar Julia, les dejo un compilador
-              Online el
-              cual puede ver por completo el código y ejecutarlo, este se encuentra al final del articulo.
+              online en el
+              cual podrá ver por completo el código y ejecutarlo, este se encuentra al final del articulo.
             </p>
-            <p>Primero veremos de que se tratá el programa</p>
+            <h3>El problema</h3>
+            <p>Primero veremos de que se tratá el programa...</p>
             <p>El problema es el siguiente: </p>
             <p> Desarrollar un programa que calcule la distancia más corta entre dos nodos de un grafo. El programa
               recibirá como entrada la especificación de un grafo (nodos y enlaces con peso, el nodo inicial y el nodo
@@ -102,10 +105,11 @@
               Algoritmo de Dijkstra. </p>
             <p>Para generar un grafo, solo necesita: </p>
             <p>1. Generar un nuevo grafo con un máximo de vertices</p>
-            <p>2. Agregar los vertices que necesites dependiento sin pasarse del máximo de vertices</p>
+            <p>2. Agregar los vertices que necesites, sin pasarse del máximo de vertices</p>
             <p>3. Enlazar los vertices con sus respectivos pesos</p>
             <p>Luego de esto usted podrá usar la opción de >encontrar recorrido más corto.</p>
-            <p>Cabe destacar que el programa ya viene con un grafo de ejemplo, esta función se encarga de generarlos.
+            <p>Cabe destacar que el programa ya viene con un grafo de ejemplo(imagen), esta función se encarga de
+              generarlo.
             </p>
             <img src="../img/Programa/programa3.jpg" alt="">
 
@@ -121,7 +125,8 @@
               grafo.</p>
             <p>Un entero que nos sirve para conocer el numero de vertices que el grafo tiene actualmente.</p>
             <p>Un array de dimensión 1 que nos sirve para almacenar los vertices de un grafo.</p>
-            <p>Cabe destacar que se usaron un modificador para estas estructuras que son los mutables, lo que esto
+            <p>Cabe destacar que se usaron un modificador para estas estructuras que son los <strong>mutable</strong>,
+              lo que esto
               significa es que los datos de la estructura pueden modificarse, si esto no lo tuviera no podriamos
               modificar estos datos.</p>
             <img src="../img/Programa/programa4.jpg" alt="">
@@ -131,18 +136,19 @@
             <img src="../img/Programa/programa8.jpg" alt="">
             <img src="../img/Programa/programa7.jpg" alt="">
             <p><strong>Funciones</strong></p>
-            <p>Las funciones son algo muy importante para la elaboración de este programa, ya que en la mayoriá se basa
-              en usar funciones, donde muchas de estas funciones tienen como parámetro una variable de tipo Grafo, ya
+            <p>Las funciones son algo muy importante para la elaboración de este programa, ya que en la mayoría se basa
+              en llamar a funciones, donde muchas de estas tienen como parámetro una variable de tipo Grafo, ya
               que estás funciones son para utilizarse en un grafo.</p>
             <img src="../img/Programa/programa5.jpg" alt="">
             <img src="../img/Programa/programa6.jpg" alt="">
             <p><strong>Arrays</strong></p>
             <p>Los arrays son muy importantes, ya que nos sirven para representar los vertices y aristas de los grafos.
-              Para la representación de un grafo es necesario utilizar una Matriz de adyacencia o una lista de
+              Para la representación de un grafo es necesario utilizar una matriz de adyacencia o una lista de
               adyacencia,
               que son las estructuras más utilizadas para representar un grafo.
               Por lo tanto sin este tipo de dato el programa simplemente no funcionaría.
             </p>
+            <p>Para este programa se utilizó una matriz de adyacencia</p>
             <img src="../img/Programa/programa9.jpg" alt="">
             <img src="../img/Programa/programa10.jpg" alt="">
             <p>Las funciones <strong>fill</strong> retornan un array, con las especificaciones de sus parámetros.</p>
